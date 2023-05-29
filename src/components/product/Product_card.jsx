@@ -1,8 +1,11 @@
 import React from 'react'
+import styles from './Product.module.css';
 
-const Product_card = () => {
+const Product_card = (props) => {
+    console.log(props.products);
+
     return (
-        <div>
+        <div className={styles.products_list}>
             viena preke
         </div>
     )

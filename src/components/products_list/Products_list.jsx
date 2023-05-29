@@ -1,6 +1,7 @@
 import React, { useState, useEffect }  from 'react';
 import Product_card from '../product/Product_card';
 import productsService from '../../services/ProductsServices'
+import styles from './Products_list.module.css';
 
 const Products_list = () => {
 //1. TOP STATE - kur desiu gautus duomenis
@@ -18,11 +19,11 @@ useEffect(()=>{
     getProducts();
 }, []);
 
-console.log(products);
+//console.log(products);
 
     return (
         <div>
-           <Product_card/>
+           <Product_card products={products}/>
         </div>
     )
 }
